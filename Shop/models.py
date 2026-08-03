@@ -8,7 +8,7 @@ class Category(models.Model):
     class Meta:
         ordering = ['name']
         indexes = [
-        models. Index(fields=['name'])
+        models.Index(fields=['name'])
         ]
         verbose_name = 'category'
         verbose_name_plural = 'categories'
@@ -26,7 +26,7 @@ class ProductFeature (models.Model) :
 
 
 class Products(models.Model):
-    category = models.ForeignKey(Category, related_name=' products', on_delete=models.CASCADE, verbose_name="category")
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE, verbose_name="category")
     name = models.CharField(max_length=255, verbose_name="product")
     slug = models.SlugField(max_length=255)
     description = models.TextField(max_length=255)
