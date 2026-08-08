@@ -76,4 +76,3 @@ class Image(models. Model):
         ]
         verbose_name = 'picture'
         verbose_name_plural ="pictures"
-
